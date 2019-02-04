@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style_1.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/text.css">
+
+  <title>Contact Us - Townsville Music Community</title>
+     
+    
+</head>
+
+
+<body class="index-1">
+
+<header id="header">
+	
+		<div class="container">
+			<div class="row">
+				<div class="grid1">
+					
+					<h1><span><a href="index.html"><span>Townsville Community Music Centre</a></span></h1>
+                    </div>
+			</div>
+		</div>
+                    </header>
+
+					<nav>
+						<ul class="menu">
+							<li><a href="index.html">Home</a></li>
+							<li ><a href="about.html">About Us</a></li>							
+							<li><a href="Musos.html">Musos</a></li>
+							<li><a href="events.html">Events</a></li>
+                            <li><a href="membership.html">Membership</a></li>
+							<li class="current"><a href="contact.html">Contact Us</a></li>
+						</ul>
+					</nav>
+				    
+    <form action="//submit.form" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
+     <script type="text/javascript">
+
+      $(document).ready(function() {
+        
+        $("#order_form").submit(function(){
+
+             
+            $.ajax({
+              url: 'haal/order',
+              type: 'POST',
+              data:$('#order_form').serialize(),
+              success: function(data) {
+                    if(data == 'OK') {
+                        console.log("ok");
+                        $('#message').html('<p>Thank you for your order.</p>');
+                   } else { $('#message').html('<p>There is something wrong with form submission.</p>'); }
+              }
+            });
+
+        });
+      });  
+   </script>
+   
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+return true; }
+</script>
+<div class="container2">
+
+					<div class="row">
+				<div class="about">
+		<h2> Get in touch with Us</h2>
+		
+
+<p>The Townsville Community Music Center can help you in an assortment of ways. Regardless of whether you are an artist searching for help to organize an occasion, an student for an educator, or basically have a music based enquiry... we are here to help!!!!!!<br>For organizing an event with us please click on the button provided below to see terms and condititons. Read the terms and conditions before contacting us for organizing an event.<br><br><a href="images/Concert Information.pdf" target="_blank" class="button1">Terms and conditions to organize an event</a><br><br>If you would like to get in touch with us, or are searching for more information about what we can offer,please provide with your details below:</p>
+
+<br><br>
+<table class="center">
+<tr> <td>
+<label for="Name">Name*:</label>
+</td> <td>
+<input name="Name" type="text" maxlength="60"  />
+</td> </tr> <tr> <td>
+<label for="PhoneNumber">Phone number:</label>
+</td> <td>
+<input name="PhoneNumber" type="text" maxlength="43"  />
+</td> </tr> <tr> <td>
+<label for="FromEmailAddress">Email address*:</label>
+</td> <td>
+<input name="FromEmailAddress" type="text" maxlength="90"  />
+</td> </tr> <tr> <td>
+<label for="Comments">Comments*:</label>
+</td> <td>
+<textarea name="Comments" rows="7" cols="40" style="width:385px;"></textarea>
+</td> </tr> <tr> <td>
+
+</td> <td>
+
+<input name="skip_Submit" type="submit" value="Submit"/>
+
+</td> </tr>
+  <tr> <td><br>
+<label for="chat">Chat with us on Facebook</label>
+</td> <td><br>
+<a href="https://www.facebook.com/townsvillemusic/" target="_blank"><img src="images/xcv.jpg" title="Facebook " /></a>
+
+
+</table>
+</form>
+</div>
+		
+	</div>
+    </div>
+        <footer id="footer">
+<div class="container">
+<div class="row">
+	<div class="grid1">
+	<div class="copyright">
+    
+    
+		<b>Office:</b> Townsville Civic Theatre, 41 Boundary Street, Townsville, Queensland 4810 | <b>Postal </b>:PO Box 1006, Townsville, Queensland 4810
+	<pre>© <span id="copyright-year"></span>|2019<a href="index.html"> Townsville music community</a></pre>
+    <img src="images/1123.jpg" alt="some text" />
+       
+	</div>
+	</div>
+	</div>
+    
+	</div>
+    
+</footer>
+
+
+</body>
+
+</html>
